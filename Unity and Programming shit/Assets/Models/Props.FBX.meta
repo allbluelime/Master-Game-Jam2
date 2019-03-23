@@ -1,0 +1,422 @@
+fileFormatVersion: 2
+guid: f7b4b9b30c9835a4bac61ed8b343f30e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Barel_A
+    100002: Barel_B
+    100004: Barel_C
+    100006: Bottle
+    100008: Box_A
+    100010: Box_B
+    100012: Cross_A_Model
+    100014: Cross_B_Model
+    100016: Door_Close
+    100018: Door_Open
+    100020: Fance_C
+    100022: Fence_A
+    100024: Fence_B
+    100026: Fence_D
+    100028: Grave_A_Model
+    100030: Grave_B_Model
+    100032: Grave_C_Model
+    100034: Lamb_A
+    100036: Lamb_B
+    100038: Lamb_C
+    100040: Leaves_A
+    100042: Leaves_B
+    100044: Leaves_C
+    100046: Metal_Fence_A
+    100048: Metal_Fence_B
+    100050: Metal_Fence_C
+    100052: Object36083
+    100054: Object36147
+    100056: Pillar
+    100058: Pillar_Model
+    100060: Pillar_Model004
+    100062: //RootNode
+    100064: Road_A
+    100066: Road_B
+    100068: Road_C
+    100070: Road_D
+    100072: Rock_A
+    100074: Rock_B
+    100076: Rock_C
+    100078: Rock_D
+    100080: Rock_E
+    100082: Rock_F
+    100084: Rock_G
+    100086: Shovel
+    100088: Shovel 1
+    100090: Shroom_A
+    100092: Shroom_B
+    100094: Shroom_C
+    100096: Shroom_D
+    100098: Tree_A
+    100100: Tree_A 1
+    100102: Tree_B
+    100104: Tree_B 1
+    100106: Tree_B 2
+    100108: Tree_C
+    100110: Tree_C 1
+    100112: Trunk_A
+    100114: Trunk_B
+    400000: Barel_A
+    400002: Barel_B
+    400004: Barel_C
+    400006: Bottle
+    400008: Box_A
+    400010: Box_B
+    400012: Cross_A_Model
+    400014: Cross_B_Model
+    400016: Door_Close
+    400018: Door_Open
+    400020: Fance_C
+    400022: Fence_A
+    400024: Fence_B
+    400026: Fence_D
+    400028: Grave_A_Model
+    400030: Grave_B_Model
+    400032: Grave_C_Model
+    400034: Lamb_A
+    400036: Lamb_B
+    400038: Lamb_C
+    400040: Leaves_A
+    400042: Leaves_B
+    400044: Leaves_C
+    400046: Metal_Fence_A
+    400048: Metal_Fence_B
+    400050: Metal_Fence_C
+    400052: Object36083
+    400054: Object36147
+    400056: Pillar
+    400058: Pillar_Model
+    400060: Pillar_Model004
+    400062: //RootNode
+    400064: Road_A
+    400066: Road_B
+    400068: Road_C
+    400070: Road_D
+    400072: Rock_A
+    400074: Rock_B
+    400076: Rock_C
+    400078: Rock_D
+    400080: Rock_E
+    400082: Rock_F
+    400084: Rock_G
+    400086: Shovel
+    400088: Shovel 1
+    400090: Shroom_A
+    400092: Shroom_B
+    400094: Shroom_C
+    400096: Shroom_D
+    400098: Tree_A
+    400100: Tree_A 1
+    400102: Tree_B
+    400104: Tree_B 1
+    400106: Tree_B 2
+    400108: Tree_C
+    400110: Tree_C 1
+    400112: Trunk_A
+    400114: Trunk_B
+    2100000: Trees_Shrooms
+    2100002: Deco
+    2100004: Pillar_Roof_Road
+    2100006: Grave_C
+    2100008: Grave_B
+    2100010: Grave_A
+    2100012: Cross_B
+    2100014: Cross_A
+    2100016: Stones
+    2100018: Leaves_Shovel_Botle
+    2300000: Barel_A
+    2300002: Barel_B
+    2300004: Barel_C
+    2300006: Bottle
+    2300008: Box_A
+    2300010: Box_B
+    2300012: Cross_A_Model
+    2300014: Cross_B_Model
+    2300016: Fance_C
+    2300018: Fence_A
+    2300020: Fence_B
+    2300022: Fence_D
+    2300024: Grave_A_Model
+    2300026: Grave_B_Model
+    2300028: Grave_C_Model
+    2300030: Lamb_A
+    2300032: Lamb_B
+    2300034: Lamb_C
+    2300036: Leaves_A
+    2300038: Leaves_B
+    2300040: Leaves_C
+    2300042: Metal_Fence_A
+    2300044: Metal_Fence_B
+    2300046: Metal_Fence_C
+    2300048: Object36083
+    2300050: Object36147
+    2300052: Pillar
+    2300054: Pillar_Model
+    2300056: Pillar_Model004
+    2300058: Road_A
+    2300060: Road_B
+    2300062: Road_C
+    2300064: Road_D
+    2300066: Rock_A
+    2300068: Rock_B
+    2300070: Rock_C
+    2300072: Rock_D
+    2300074: Rock_E
+    2300076: Rock_F
+    2300078: Rock_G
+    2300080: Shovel 1
+    2300082: Shroom_A
+    2300084: Shroom_B
+    2300086: Shroom_C
+    2300088: Shroom_D
+    2300090: Tree_A 1
+    2300092: Tree_B
+    2300094: Tree_B 2
+    2300096: Tree_C 1
+    2300098: Trunk_A
+    2300100: Trunk_B
+    3300000: Barel_A
+    3300002: Barel_B
+    3300004: Barel_C
+    3300006: Bottle
+    3300008: Box_A
+    3300010: Box_B
+    3300012: Cross_A_Model
+    3300014: Cross_B_Model
+    3300016: Fance_C
+    3300018: Fence_A
+    3300020: Fence_B
+    3300022: Fence_D
+    3300024: Grave_A_Model
+    3300026: Grave_B_Model
+    3300028: Grave_C_Model
+    3300030: Lamb_A
+    3300032: Lamb_B
+    3300034: Lamb_C
+    3300036: Leaves_A
+    3300038: Leaves_B
+    3300040: Leaves_C
+    3300042: Metal_Fence_A
+    3300044: Metal_Fence_B
+    3300046: Metal_Fence_C
+    3300048: Object36083
+    3300050: Object36147
+    3300052: Pillar
+    3300054: Pillar_Model
+    3300056: Pillar_Model004
+    3300058: Road_A
+    3300060: Road_B
+    3300062: Road_C
+    3300064: Road_D
+    3300066: Rock_A
+    3300068: Rock_B
+    3300070: Rock_C
+    3300072: Rock_D
+    3300074: Rock_E
+    3300076: Rock_F
+    3300078: Rock_G
+    3300080: Shovel 1
+    3300082: Shroom_A
+    3300084: Shroom_B
+    3300086: Shroom_C
+    3300088: Shroom_D
+    3300090: Tree_A 1
+    3300092: Tree_B
+    3300094: Tree_B 2
+    3300096: Tree_C 1
+    3300098: Trunk_A
+    3300100: Trunk_B
+    4300000: Trunk_A
+    4300002: Trunk_B
+    4300004: Shroom_A
+    4300006: Shroom_B
+    4300008: Tree_B
+    4300010: Metal_Fence_A
+    4300012: Lamb_B
+    4300014: Fence_B
+    4300016: Fence_D
+    4300018: Barel_A
+    4300020: Fence_A
+    4300022: Fance_C
+    4300024: Lamb_C
+    4300026: Lamb_A
+    4300028: Box_A
+    4300030: Barel_B
+    4300032: Barel_C
+    4300034: Box_B
+    4300036: Metal_Fence_B
+    4300038: Metal_Fence_C
+    4300040: Pillar
+    4300042: Shroom_C
+    4300044: Shroom_D
+    4300046: Grave_C_Model
+    4300048: Grave_B_Model
+    4300050: Grave_A_Model
+    4300052: Cross_B_Model
+    4300054: Cross_A_Model
+    4300056: Road_A
+    4300058: Road_B
+    4300060: Road_D
+    4300062: Road_C
+    4300064: Pillar_Model
+    4300066: Object36083
+    4300068: Object36147
+    4300070: Pillar_Model004
+    4300072: Rock_B
+    4300074: Rock_C
+    4300076: Rock_A
+    4300078: Rock_D
+    4300080: Rock_E
+    4300082: Rock_F
+    4300084: Rock_G
+    4300086: Shovel
+    4300088: Bottle
+    4300090: Leaves_A
+    4300092: Tree_A
+    4300094: Tree_B
+    4300096: Leaves_B
+    4300098: Tree_C
+    4300100: Leaves_C
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cross_A
+    second: {fileID: 2100000, guid: 65bf5cac69b82ec4faadea28dac9f39b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cross_B
+    second: {fileID: 2100000, guid: ba64184277bd6ee41a874dbd211b9641, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Deco
+    second: {fileID: 2100000, guid: f6c096ceb1cbd5d48ad6b4ce86d85c11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grave_A
+    second: {fileID: 2100000, guid: c5b0901cb44581c498eac792236f12ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grave_B
+    second: {fileID: 2100000, guid: f58f02893cb609e4ba61bfb4d457c09f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grave_C
+    second: {fileID: 2100000, guid: b0a43d1c2d428cb4aa7c4c4dff59a50b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaves_Shovel_Botle
+    second: {fileID: 2100000, guid: 8ea333840dce55b4ab436adab0f9fe87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pillar_Roof_Road
+    second: {fileID: 2100000, guid: 7e8c37ff29dbae542a58be1d5d7e2f53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stones
+    second: {fileID: 2100000, guid: 6cdb3b26ee9d69442ba6c2b869fc5a2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trees_Shrooms
+    second: {fileID: 2100000, guid: 12bad9b865444dc4aa3bbce6d36017d7, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
