@@ -19,8 +19,8 @@ public class FieldOfView : MonoBehaviour
     public float edgeDistanceThreshold;
 
     public float maskCutawayDistance = 0.1f;
-
     public MeshFilter viewMeshFilter;
+    public MeshFilter secondViewMeshFilter;
     Mesh viewMesh;
 
     private void Start()
@@ -28,7 +28,7 @@ public class FieldOfView : MonoBehaviour
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
-
+        secondViewMeshFilter.mesh = viewMesh;
         StartCoroutine("FindTargetsWithDelay", 0.2f);
     }
 
