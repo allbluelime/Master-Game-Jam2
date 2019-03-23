@@ -18,9 +18,12 @@ public class Patrol : MonoBehaviour
     private float maxSpeed = 2f;
     [SerializeField]
     private AudioSource audioS;
+    [SerializeField]
+    private InGameUIManager UIManager;
     private int destPoint = 0;
     private NavMeshAgent agent;
     private Vector3 lastPlayerPosition;
+    private bool followPlayer = false;
     private Vector3 resetPosition = new Vector3(-100, -100, -100);
     void Start()
     {
@@ -58,6 +61,7 @@ public class Patrol : MonoBehaviour
                 }
                 if (agent.speed != minSpeed)
                 {
+                    followPlayer = false;
                     agent.speed = minSpeed;
                 }
 
@@ -68,20 +72,23 @@ public class Patrol : MonoBehaviour
         {
             lastPlayerPosition = player.transform.position;
             agent.destination = lastPlayerPosition;
-            if(agent.speed != maxSpeed)
+            if (agent.speed != maxSpeed)
             {
+                followPlayer = true;
                 audioS.Play();
-                agent.speed = maxSpeed; 
+                agent.speed = maxSpeed;
             }
             Debug.Log("Found player");
         }
-
-
-
-
-
-
-
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player" && followPlayer == true)
+        {
+            
+            UIManager.ShowDeadScreen();
+            
+        }
     }
 }
 
