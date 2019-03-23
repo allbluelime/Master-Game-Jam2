@@ -11,16 +11,19 @@ public class Patrol : MonoBehaviour
     [SerializeField]
     private GameObject player;
     [SerializeField]
-    private float seeDistance = 20f;
-    [SerializeField]
     private FOVEnemy fovEnemy;
     [SerializeField]
     private float minSpeed = 1.5f;
     [SerializeField]
     private float maxSpeed = 2f;
+    [SerializeField]
+    private AudioSource audioS;
+    [SerializeField]
+    private InGameUIManager UIManager;
     private int destPoint = 0;
     private NavMeshAgent agent;
     private Vector3 lastPlayerPosition;
+    private bool followPlayer = false;
     private Vector3 resetPosition = new Vector3(-100, -100, -100);
     void Start()
     {
@@ -48,7 +51,6 @@ public class Patrol : MonoBehaviour
 
     void Update()
     {
-        Debug.DrawRay(transform.position, transform.forward * seeDistance, Color.red);
         if (fovEnemy.visibleTargets.Count == 0)
         {
             if (!agent.pathPending && agent.remainingDistance < 0.5f)
@@ -59,6 +61,7 @@ public class Patrol : MonoBehaviour
                 }
                 if (agent.speed != minSpeed)
                 {
+                    followPlayer = false;
                     agent.speed = minSpeed;
                 }
 
@@ -69,19 +72,23 @@ public class Patrol : MonoBehaviour
         {
             lastPlayerPosition = player.transform.position;
             agent.destination = lastPlayerPosition;
-            if(agent.speed != maxSpeed)
+            if (agent.speed != maxSpeed)
             {
-                agent.speed = maxSpeed; 
+                followPlayer = true;
+                audioS.Play();
+                agent.speed = maxSpeed;
             }
             Debug.Log("Found player");
         }
-
-
-
-
-
-
-
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player" && followPlayer == true)
+        {
+            
+            UIManager.ShowDeadScreen();
+            
+        }
     }
 }
 

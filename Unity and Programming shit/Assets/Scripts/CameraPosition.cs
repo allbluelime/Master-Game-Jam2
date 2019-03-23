@@ -1,20 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraPosition : MonoBehaviour
 {
     [SerializeField]
-    private GameObject player;
-    // Start is called before the first frame update
-    void Start()
+    private Transform target;
+    [SerializeField]
+    private float smoothSpeed = 10f;
+    [SerializeField]
+    private Vector3 offset;
+    private void FixedUpdate()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+        Vector3 desiredPosition = target.position + offset;
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed*Time.deltaTime);
+        transform.position = smoothedPosition;
+       
     }
 }
