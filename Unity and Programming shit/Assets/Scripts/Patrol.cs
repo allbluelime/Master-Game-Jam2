@@ -20,6 +20,15 @@ public class Patrol : MonoBehaviour
     private AudioSource audioS;
     [SerializeField]
     private InGameUIManager UIManager;
+    [SerializeField]
+    private bool rotate = false;
+    private bool pauseRotation = false;
+    [SerializeField]
+    private float rotateSpeed = 10f;
+    [SerializeField]
+    private Animator enemyAnimation;
+    [SerializeField]
+    private CurrentState enemyState;
     private int destPoint = 0;
     private NavMeshAgent agent;
     private Vector3 lastPlayerPosition;
@@ -30,15 +39,29 @@ public class Patrol : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
         agent.autoBraking = false;
+        if (rotate == false)
+        {
+            GotoNextPoint();
+        }
+        if (rotate == true)
+        {
+            agent.destination = points[0].position;
+            enemyState = CurrentState.Walking;
+        }
 
-        GotoNextPoint();
 
     }
 
 
+    void RotateEnemy()
+    {
+        
+        transform.Rotate(Vector3.up, rotateSpeed * Time.deltaTime);
+    }
+
     void GotoNextPoint()
     {
-
+        enemyState = CurrentState.Walking;
         if (points.Length == 0)
             return;
 
@@ -51,8 +74,19 @@ public class Patrol : MonoBehaviour
 
     void Update()
     {
+        AnimationChecker();
+        if (rotate == true && pauseRotation == false && !agent.pathPending && agent.remainingDistance < 0.5f)
+        {
+            enemyState = CurrentState.Idle;
+            Debug.Log("fuck my life");
+            agent.updateRotation = false;
+            agent.isStopped = true;
+            RotateEnemy();
+
+        }
         if (fovEnemy.visibleTargets.Count == 0)
         {
+
             if (!agent.pathPending && agent.remainingDistance < 0.5f)
             {
                 if (lastPlayerPosition != resetPosition)
@@ -65,7 +99,17 @@ public class Patrol : MonoBehaviour
                     agent.speed = minSpeed;
                 }
 
-                GotoNextPoint();
+                if (rotate == false)
+                {
+                    GotoNextPoint();
+                }
+                else if(pauseRotation == true)
+                {
+                    enemyState = CurrentState.Walking;
+                    agent.destination = points[0].position;
+                    pauseRotation = false;
+                }
+
             }
         }
         else
@@ -74,21 +118,49 @@ public class Patrol : MonoBehaviour
             agent.destination = lastPlayerPosition;
             if (agent.speed != maxSpeed)
             {
+                agent.updateRotation = true;
+                agent.isStopped = false;
+                pauseRotation = true;
                 followPlayer = true;
                 audioS.Play();
+                enemyState = CurrentState.Running;
                 agent.speed = maxSpeed;
             }
-            Debug.Log("Found player");
+
         }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player" && followPlayer == true)
         {
-            
             UIManager.ShowDeadScreen();
-            
+
         }
+    }
+    private void AnimationChecker()
+    {
+        if(enemyState == CurrentState.Idle)
+        {
+            enemyAnimation.SetBool("isWalking", false);
+            enemyAnimation.SetBool("isRunning", false);
+        }
+        else if(enemyState == CurrentState.Walking)
+        {
+            enemyAnimation.SetBool("isWalking", true);
+            enemyAnimation.SetBool("isRunning", false);
+        }
+        else if(enemyState == CurrentState.Running)
+        {
+            enemyAnimation.SetBool("isWalking", false);
+            enemyAnimation.SetBool("isRunning", true);
+        }
+    }
+    enum CurrentState
+    {
+        Idle,
+        Walking,
+        Running
+
     }
 }
 

@@ -7,8 +7,13 @@ using UnityEngine;
 public class MainMenuManager : MonoBehaviour
 {
     // Start is called before the first frame update
-public void StartGame()
+    public void StartGame()
     {
         SceneManager.LoadScene(1);
+
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
