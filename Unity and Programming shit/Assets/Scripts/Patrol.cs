@@ -78,7 +78,6 @@ public class Patrol : MonoBehaviour
         if (rotate == true && pauseRotation == false && !agent.pathPending && agent.remainingDistance < 0.5f)
         {
             enemyState = CurrentState.Idle;
-            Debug.Log("fuck my life");
             agent.updateRotation = false;
             agent.isStopped = true;
             RotateEnemy();

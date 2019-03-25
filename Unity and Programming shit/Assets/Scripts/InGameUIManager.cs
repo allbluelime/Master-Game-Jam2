@@ -21,9 +21,10 @@ public class InGameUIManager : MonoBehaviour
     }
     public void ShowDeadScreen()
     {
-        Time.timeScale = 0;
+        
         Cursor.visible = true;
         DeathScreen.SetActive(true);
+        Time.timeScale = 0;
     }
     public void BackToMainMenu()
     {
